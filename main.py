@@ -15,9 +15,9 @@ def get_content(target):
 
 if __name__ == '__main__':
     # server = (input("add a server html:"))
-    target = (input("Add a target url(like :https://www.xsbiquge.com/15_15338):"))
+    # target = (input("add a target html:"))
     server = 'https://www.xsbiquge.com'
-    # target = 'https://www.xsbiquge.com/15_15338'
+    target = 'https://www.xsbiquge.com/15_15338'
     book_name = 'book.txt'
     req = requests.get(url=target)
     req.encoding = 'utf-8'
