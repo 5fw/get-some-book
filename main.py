@@ -50,12 +50,12 @@ if __name__ == '__main__':
     html = req.text
     char_bs = BeautifulSoup(html, 'lxml')
     # filter
-    chapters = char_bs.find('div', id='list')
+    # chapters = char_bs.find('div', id='list')
     chapters = char_bs.find_all('a')
     for chapter in tqdm(chapters):
         chapter_name = chapter.string
         url = server+chapter.get('href')
-        # remove useless chapter,only keep chapter name like '章'
+        # remove useless chapter,only keep chapter name in '章'
         if  '章' in chapter_name:
             content = get_content(url)
             with open(bookName, 'a', encoding='utf-8') as f:
